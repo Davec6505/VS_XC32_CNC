@@ -1,4 +1,7 @@
-../objs/main.o: ../srcs/main.c ../incs/xc.h ../incs/xc-pic32m.h
+../objs/init.o: ../srcs/init.c ../incs/init.h ../incs/xc.h \
+ ../incs/xc-pic32m.h
+
+../incs/init.h:
 
 ../incs/xc.h:
 

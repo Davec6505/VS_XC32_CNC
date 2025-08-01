@@ -11,6 +11,7 @@ SRC_DIR  := $(ROOT)/srcs
 
 SRCS      := $(shell find $(ROOT)/srcs -type f -name '*.c')
 OBJS 	  := $(SRCS:$(ROOT)/srcs/%.c=$(OBJ_DIR)/%.o)
+
 COMPILER  := c99
 ifeq ($(COMPILER),c99)
 CC := xc32-gcc
@@ -38,18 +39,19 @@ DIRECT_LINK := "/opt/microchip/xc32/v4.60/bin/xc32-gcc"   -mprocessor=32MZ2048EF
 			-Wl,--defsym=__MPLAB_BUILD=1,--script="p32MZ1024EFH100.ld",--defsym=_min_heap_size=512,--gc-sections,--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="$(OBJ_DIR)/production.map",--memorysummary,$(OBJ_DIR)/memoryfile.xml \
 			
 
-INC := -I$(INC_DIR) -I /opt/microchip/mplabx/v6.25/packs/Microchip/PIC32MZ-EF_DFP/1.4.168/include
+INC := -I$(INC_DIR)  -I/opt/microchip/mplabx/v6.25/packs/Microchip/PIC32MZ-EF_DFP/1.4.168/include
 
 
 
-$(BIN_DIR)/all: $(OBJ)
+$(BIN_DIR)/all: $(OBJS)
 	@echo "Building project for $(DEVICE)"
 	@echo "Linking object files to create the final executable"
 	$(DIRECT_LINK) -o $@ $^ 
 	@echo "Build complete. Output is in $(BIN_DIR)"
 
-$(OBJ): $(SRCS)
-	@echo "Compiling $<	to $@"
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@echo "Compiling $< to $@"
+	$(DIRECT_OBJ) -c $< -o $@
 	$(DIRECT_OBJ) -c $< -o $@ 
 
 
@@ -59,20 +61,21 @@ $(OBJ): $(SRCS)
 build_dir: 
 	@echo "Creating build base directories if they do not exist"
 	mkdir -p $(OBJ_DIR) $(BIN_DIR) $(SRC_DIR) $(INC_DIR)
-	@echo "Building OBJ_DIR sub directories from SRC_DIR sub directories."
-	for d in $(shell find $(SRC_DIR) -type d | sed 's/$(ROOT)\/srcs//'); do \
-		mkdir -p $(OBJ_DIR)/$$d; \
+	@echo "Building OBJ_DIR and INC_DIR sub directories from SRC_DIR sub directories."
+	for d in $(shell find $(SRC_DIR) -type d | sed 's|$(ROOT)/srcs/||'); do \
+		if [ "$$d" != "" ]; then \
+			mkdir -p $(OBJ_DIR)/$$d; \
+			mkdir -p $(INC_DIR)/$$d; \
+		fi \
 	done
 
 
-
-#find $(SRC_DIR) -type d -exec mkdir -p $(OBJ_DIR)/{} \;
 
 
 debug:
 	@echo $(SRCS)
 	@echo $(OBJS)
-
+	@echo $(INC_DIR)
 
 
 clean:
