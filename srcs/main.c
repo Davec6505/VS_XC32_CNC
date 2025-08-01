@@ -1,5 +1,5 @@
 #include "xc.h" // Include the appropriate header file for your PIC32MZ
-
+#include "init.h" // Include the header file for initialization functions
 
 
 // Function prototype
@@ -20,7 +20,3 @@ int main(void)
     return 0;
 }
 
-void CPU_Initialize(void)
-{
-
-}

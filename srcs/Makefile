@@ -9,12 +9,8 @@ INC_DIR  := $(ROOT)/incs
 BIN_DIR  := $(ROOT)/bins
 SRC_DIR  := $(ROOT)/srcs
 
-SRCS      := $(shell echo $(shell find $(ROOT)/srcs -type f -name *.c) | sed 's/\.c$$/\/.c/g')
-SRC 	  := $(shell echo $(SRCS) | sed 's/main\/.c$$/%.c/g')
-OBJ 	  := $(shell echo $(SRCS:%.c=$(ROOT)/objs/%.o) | sed 's/\/..\/srcs//g' | sed 's/\/.o$$/.o/g')
-OBJS 	  := $(shell echo $(SRCS:%.c=$(ROOT)/objs/%.o) | sed 's/\/..\/srcs//g' | sed 's/main\/.o/%.o/g')
-SRCS	  := $(shell echo $(SRCS) | sed 's/\/\.c$$/.c/g')
-
+SRCS      := $(shell find $(ROOT)/srcs -type f -name '*.c')
+OBJS 	  := $(SRCS:$(ROOT)/srcs/%.c=$(OBJ_DIR)/%.o)
 COMPILER  := c99
 ifeq ($(COMPILER),c99)
 CC := xc32-gcc
@@ -59,14 +55,24 @@ $(OBJ): $(SRCS)
 
 .PHONY: clean  build_dir debug
 
-build_dir:
+
+build_dir: 
+	@echo "Creating build base directories if they do not exist"
+	mkdir -p $(OBJ_DIR) $(BIN_DIR) $(SRC_DIR) $(INC_DIR)
+	@echo "Building OBJ_DIR sub directories from SRC_DIR sub directories."
+	for d in $(shell find $(SRC_DIR) -type d | sed 's/$(ROOT)\/srcs//'); do \
+		mkdir -p $(OBJ_DIR)/$$d; \
+	done
+
+
+
+#find $(SRC_DIR) -type d -exec mkdir -p $(OBJ_DIR)/{} \;
 
 
 debug:
 	@echo $(SRCS)
-	@echo $(SRC)
 	@echo $(OBJS)
-	@echo $(OBJ)
+
 
 
 clean:
