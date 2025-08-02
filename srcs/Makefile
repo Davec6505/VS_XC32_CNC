@@ -1,7 +1,12 @@
 DEVICE := 32MZ1024EFH100
 
-#"/opt/microchip/mplabx/v6.25/packs/Microchip/PIC32MZ-EF_DFP/1.4.168"
-
+# Compiler location and DFP (Device Family Pack) location
+# The compiler location is expected to be the path to the xc32-gcc compiler.
+# The DFP location is expected to be the path to the Microchip Device Family Pack.
+# The DFP is used to provide the necessary header files and libraries for the specific device.
+# The DFP is expected to be installed in the MPLAB X IDE installation directory.
+# The DFP is expected to be in the packs directory of the MPLAB X IDE installation directory.
+# The DFP is expected to be in the format of Microchip/PIC32MZ-EF_DFP/1.4.168.
 COMPILER_LOCATION := /opt/microchip/xc32/v4.60/bin
 DFP_LOCATION := /opt/microchip/mplabx/v6.25/packs
 DFP := Microchip/PIC32MZ-EF_DFP/1.4.168
@@ -27,6 +32,12 @@ BIN_DIR  := $(ROOT)/bins
 SRC_DIR  := $(ROOT)/srcs
 OUT_DIR  := $(ROOT)/other
 
+# Source files and object files
+# The source files are expected to be in the srcs directory & sub-directories.
+# The source files are expected to have the .c extension.
+# The object files are created with the .o extension.
+# The object files are created in the objs directory with the same subdirectory structure as the srcs directory.
+# The object files are created with the same name as the source files, but with the .o extension.
 SRCS      := $(shell find $(ROOT)/srcs -type f -name '*.c')
 OBJS 	  := $(SRCS:$(ROOT)/srcs/%.c=$(OBJ_DIR)/%.o)
 
@@ -77,9 +88,14 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 #	$(DIRECT_OBJ) -c $< -o $@ 
 
 
-.PHONY: clean build_dir debug
+.PHONY: clean build_dir debug  help
 
-
+# Create the build directories if they do not exist
+# This target is used to create the necessary directories for the build process.
+# It creates the OBJ_DIR, BIN_DIR, SRC_DIR, INC_DIR, and OUT_DIR
+# It also creates subdirectories in OBJ_DIR and INC_DIR for each subdirectory in SRC_DIR
+# This is useful for organizing the build output and include files.
+# To run this target, use: make build_dir
 build_dir: 
 	@echo "Creating build base directories if they do not exist"
 	mkdir -p $(OBJ_DIR) $(BIN_DIR) $(SRC_DIR) $(INC_DIR) $(OUT_DIR)
@@ -91,11 +107,24 @@ build_dir:
 		fi \
 	done
 
-
+# Display the source files, object files, and include directories
 debug:
 	@echo $(SRCS)
 	@echo $(OBJS)
 	@echo $(INCS)
+
+
+# For xc32 Compiler help with less use: make help less
+# For xc32 Compiler help without less use: make help
+help:
+	@echo "Displaying help information for xc32-gcc"
+ifeq ($(filter less,$(MAKECMDGOALS)),less)
+	xc32-gcc --help | less
+else
+	xc32-gcc --help
+endif
+
+
 
 
 clean:
