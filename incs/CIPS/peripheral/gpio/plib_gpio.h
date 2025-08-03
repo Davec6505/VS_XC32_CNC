@@ -63,40 +63,40 @@
 
 
 /*** Macros for GPIO_RB8 pin ***/
-#define GPIO_RB8_Set()               (LATBSET = (1U<<8))
-#define GPIO_RB8_Clear()             (LATBCLR = (1U<<8))
-#define GPIO_RB8_Toggle()            (LATBINV= (1U<<8))
-#define GPIO_RB8_OutputEnable()      (TRISBCLR = (1U<<8))
-#define GPIO_RB8_InputEnable()       (TRISBSET = (1U<<8))
-#define GPIO_RB8_Get()               ((PORTB >> 8) & 0x1U)
-#define GPIO_RB8_PIN                  GPIO_PIN_RB8
+#define SW1_Set()               (LATBSET = (1U<<8))
+#define SW1_Clear()             (LATBCLR = (1U<<8))
+#define SW1_Toggle()            (LATBINV= (1U<<8))
+#define SW1_OutputEnable()      (TRISBCLR = (1U<<8))
+#define SW1_InputEnable()       (TRISBSET = (1U<<8))
+#define SW1_Get()               ((PORTB >> 8) & 0x1U)
+#define SW1_PIN                  GPIO_PIN_RB8
 
 /*** Macros for GPIO_RB9 pin ***/
-#define GPIO_RB9_Set()               (LATBSET = (1U<<9))
-#define GPIO_RB9_Clear()             (LATBCLR = (1U<<9))
-#define GPIO_RB9_Toggle()            (LATBINV= (1U<<9))
-#define GPIO_RB9_OutputEnable()      (TRISBCLR = (1U<<9))
-#define GPIO_RB9_InputEnable()       (TRISBSET = (1U<<9))
-#define GPIO_RB9_Get()               ((PORTB >> 9) & 0x1U)
-#define GPIO_RB9_PIN                  GPIO_PIN_RB9
+#define LED1_Set()               (LATBSET = (1U<<9))
+#define LED1_Clear()             (LATBCLR = (1U<<9))
+#define LED1_Toggle()            (LATBINV= (1U<<9))
+#define LED1_OutputEnable()      (TRISBCLR = (1U<<9))
+#define LED1_InputEnable()       (TRISBSET = (1U<<9))
+#define LED1_Get()               ((PORTB >> 9) & 0x1U)
+#define LED1_PIN                  GPIO_PIN_RB9
 
 /*** Macros for GPIO_RB10 pin ***/
-#define GPIO_RB10_Set()               (LATBSET = (1U<<10))
-#define GPIO_RB10_Clear()             (LATBCLR = (1U<<10))
-#define GPIO_RB10_Toggle()            (LATBINV= (1U<<10))
-#define GPIO_RB10_OutputEnable()      (TRISBCLR = (1U<<10))
-#define GPIO_RB10_InputEnable()       (TRISBSET = (1U<<10))
-#define GPIO_RB10_Get()               ((PORTB >> 10) & 0x1U)
-#define GPIO_RB10_PIN                  GPIO_PIN_RB10
+#define SW2_Set()               (LATBSET = (1U<<10))
+#define SW2_Clear()             (LATBCLR = (1U<<10))
+#define SW2_Toggle()            (LATBINV= (1U<<10))
+#define SW2_OutputEnable()      (TRISBCLR = (1U<<10))
+#define SW2_InputEnable()       (TRISBSET = (1U<<10))
+#define SW2_Get()               ((PORTB >> 10) & 0x1U)
+#define SW2_PIN                  GPIO_PIN_RB10  
 
 /*** Macros for GPIO_RB11 pin ***/
-#define GPIO_RB11_Set()               (LATBSET = (1U<<11))
-#define GPIO_RB11_Clear()             (LATBCLR = (1U<<11))
-#define GPIO_RB11_Toggle()            (LATBINV= (1U<<11))
-#define GPIO_RB11_OutputEnable()      (TRISBCLR = (1U<<11))
-#define GPIO_RB11_InputEnable()       (TRISBSET = (1U<<11))
-#define GPIO_RB11_Get()               ((PORTB >> 11) & 0x1U)
-#define GPIO_RB11_PIN                  GPIO_PIN_RB11
+#define LED2_Set()               (LATBSET = (1U<<11))
+#define LED2_Clear()             (LATBCLR = (1U<<11))
+#define LED2_Toggle()            (LATBINV= (1U<<11))
+#define LED2_OutputEnable()      (TRISBCLR = (1U<<11))
+#define LED2_InputEnable()       (TRISBSET = (1U<<11))
+#define LED2_Get()               ((PORTB >> 11) & 0x1U)
+#define LED2_PIN                  GPIO_PIN_RB11
 
 
 // *****************************************************************************

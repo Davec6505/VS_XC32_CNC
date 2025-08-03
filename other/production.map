@@ -3,25 +3,25 @@ Optional file vector_offset_init.o not found
 Archive member included to satisfy reference by file (symbol)
 
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
-                              /tmp/ccmGEvHN.o (_on_reset)
+                              /tmp/cc2iDNTw.o (_on_reset)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
-                              /tmp/ccmGEvHN.o (_on_bootstrap)
+                              /tmp/cc2iDNTw.o (_on_bootstrap)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-nmi-handler.o)
-                              /tmp/ccmGEvHN.o (_nmi_handler)
+                              /tmp/cc2iDNTw.o (_nmi_handler)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_data_init_core.o)
-                              /tmp/ccmGEvHN.o (__pic32_data_init)
+                              /tmp/cc2iDNTw.o (__pic32_data_init)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_init_cache.o)
-                              /tmp/ccmGEvHN.o (__pic32_init_cache)
+                              /tmp/cc2iDNTw.o (__pic32_init_cache)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_init_tlb_ebi_sqi.o)
-                              /tmp/ccmGEvHN.o (__pic32_tlb_init_ebi_sqi)
+                              /tmp/cc2iDNTw.o (__pic32_tlb_init_ebi_sqi)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(general-exception.o)
-                              /tmp/ccmGEvHN.o (_general_exception_context)
+                              /tmp/cc2iDNTw.o (_general_exception_context)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(cache-err-exception.o)
-                              /tmp/ccmGEvHN.o (_cache_err_exception_context)
+                              /tmp/cc2iDNTw.o (_cache_err_exception_context)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(simple-tlb-refill-exception.o)
-                              /tmp/ccmGEvHN.o (_simple_tlb_refill_exception_context)
+                              /tmp/cc2iDNTw.o (_simple_tlb_refill_exception_context)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
-                              /tmp/ccdVHDKr.o (_DefaultInterrupt)
+                              /tmp/cc4ONM4H.o (_DefaultInterrupt)
 
 Optional file vector_offset_init.o not found
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_data_init_clear.o)
@@ -56,21 +56,22 @@ section                    address  length [bytes]      (dec)  Description
 .text                   0x9d000d88           0x7c         124  App's exec code 
 .text.GPIO_Initialize   0x9d000e04           0x78         120   
 .text.main_entry        0x9d000e7c           0x54          84   
-.text.TIMER_2_Interrupt 0x9d000ed0           0x48          72   
-.text.TIMER_1_Interrupt 0x9d000f18           0x48          72   
-.text                   0x9d000f60           0x44          68  App's exec code 
-.text.TMR2_Initialize   0x9d000fa4           0x3c          60   
-.text.CORETIMER_Initial 0x9d000fe0           0x3c          60   
-.text.TMR1_Initialize   0x9d00101c           0x3c          60   
-.text.UART3_Initialize  0x9d001058           0x38          56   
-.text                   0x9d001090           0x20          32  App's exec code 
-.text._general_exceptio 0x9d0010b0           0x18          24   
-.text._bootstrap_except 0x9d0010c8           0x18          24   
-.text._cache_err_except 0x9d0010e0           0x18          24   
-.text._simple_tlb_refil 0x9d0010f8           0x18          24   
-.text.main              0x9d001110           0x18          24   
-.text                   0x9d001128           0x30          48  App's exec code 
-      Total kseg0_program_mem used  :      0x1154        4436  0.4% of 0x100000
+.text.CORETIMER_DelayMs 0x9d000ed0           0x4c          76   
+.text.TIMER_2_Interrupt 0x9d000f1c           0x48          72   
+.text.TIMER_1_Interrupt 0x9d000f64           0x48          72   
+.text                   0x9d000fac           0x44          68  App's exec code 
+.text.TMR2_Initialize   0x9d000ff0           0x3c          60   
+.text.CORETIMER_Initial 0x9d00102c           0x3c          60   
+.text.TMR1_Initialize   0x9d001068           0x3c          60   
+.text.UART3_Initialize  0x9d0010a4           0x38          56   
+.text.main              0x9d0010dc           0x34          52   
+.text                   0x9d001110           0x20          32  App's exec code 
+.text._general_exceptio 0x9d001130           0x18          24   
+.text._bootstrap_except 0x9d001148           0x18          24   
+.text._cache_err_except 0x9d001160           0x18          24   
+.text._simple_tlb_refil 0x9d001178           0x18          24   
+.text                   0x9d001190           0x30          48  App's exec code 
+      Total kseg0_program_mem used  :      0x11bc        4540  0.4% of 0x100000
 
 kseg0 Boot-Memory Usage
 section                    address  length [bytes]      (dec)  Description
@@ -84,7 +85,7 @@ section                    address  length [bytes]      (dec)  Description
 .bev_excpt              0xbfc00380           0x10          16  BEV-Exception 
          Total kseg1_boot_mem used  :       0x1d4         468  40.6% of 0x480
         --------------------------------------------------------------------------
-         Total Program Memory used  :      0x1328        4904  0.5% of 0x100480
+         Total Program Memory used  :      0x1390        5008  0.5% of 0x100480
         --------------------------------------------------------------------------
 
 
@@ -114,8 +115,8 @@ Microchip PIC32 Memory-Usage Report By Module
 --------------------------------------------------------------------------------
         1040           0           0        1040         410    interrupts.o                 ../objs/CIPS/interrupts.o
          928           0           0         928         3a0    data_init                    data_init
-           0         668           0         668         29c    cctBbRgN.o                   /tmp/cctBbRgN.o
-         600           0           0         600         258    ccmGEvHN.o                   /tmp/ccmGEvHN.o
+           0         668           0         668         29c    cc2WwpHR.o                   /tmp/cc2WwpHR.o
+         600           0           0         600         258    cc2iDNTw.o                   /tmp/cc2iDNTw.o
          448          36           0         484         1e4    pic32_init_cache.o           libpic32.a
          244           0           0         244          f4    plib_clk.o                   ../objs/CIPS/peripheral/clk/plib_clk.o
          220           0           0         220          dc    general-exception.o          libpic32.a
@@ -125,6 +126,7 @@ Microchip PIC32 Memory-Usage Report By Module
          160           0           0         160          a0    initialization.o             ../objs/CIPS/initialization.o
          144           0           0         144          90    pic32_data_init_core.o       libpic32.a
          132           0           8         140          8c    plib_tmr1.o                  ../objs/CIPS/peripheral/tmr1/plib_tmr1.o
+         136           4           0         140          8c    plib_coretimer.o             ../objs/CIPS/peripheral/coretimer/plib_coretimer.o
          132           0           8         140          8c    plib_tmr2.o                  ../objs/CIPS/peripheral/tmr/plib_tmr2.o
          120           0           0         120          78    plib_gpio.o                  ../objs/CIPS/peripheral/gpio/plib_gpio.o
           96           0           0          96          60    exceptions.o                 ../objs/CIPS/exceptions.o
@@ -132,17 +134,16 @@ Microchip PIC32 Memory-Usage Report By Module
           72           0           0          72          48    defaultinterrupt.o           libpic32.a
           68           0           0          68          44    pic32_software_reset.o       /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
           68           0           0          68          44    debug-exception-return.o     /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/debug-exception-return.o
-          60           4           0          64          40    plib_coretimer.o             ../objs/CIPS/peripheral/coretimer/plib_coretimer.o
           56           0           0          56          38    plib_uart3.o                 ../objs/CIPS/peripheral/uart/plib_uart3.o
+          52           0           0          52          34    main.o                       ../objs/main.o
           32           0           0          32          20    pic32_data_init_copy.o       libpic32.a
           24           0           0          24          18    pic32_data_init_clear.o      libpic32.a
           24           0           0          24          18    default-nmi-handler.o        libpic32.a
-          24           0           0          24          18    main.o                       ../objs/main.o
            8           0           0           8           8    default-on-bootstrap.o       libpic32.a
            8           0           0           8           8    default-on-reset.o           libpic32.a
           96           0           0          96          60    misc                         misc
 --------------------------------------------------------------------------------
-        5516         708          16        6240        1860    ../bins/VS_XC32_CNC
+        5620         708          16        6344        18c8    ../bins/VS_XC32_CNC
 
 
 Discarded input sections
@@ -282,8 +283,6 @@ Discarded input sections
                 0x0000000000000000       0x18 ../objs/CIPS/peripheral/coretimer/plib_coretimer.o
  .text.CORETIMER_CompareHasExpired
                 0x0000000000000000       0x24 ../objs/CIPS/peripheral/coretimer/plib_coretimer.o
- .text.CORETIMER_DelayMs
-                0x0000000000000000       0x4c ../objs/CIPS/peripheral/coretimer/plib_coretimer.o
  .text.CORETIMER_DelayUs
                 0x0000000000000000       0x3c ../objs/CIPS/peripheral/coretimer/plib_coretimer.o
  .text          0x0000000000000000        0x0 ../objs/CIPS/peripheral/tmr1/plib_tmr1.o
@@ -342,31 +341,31 @@ Discarded input sections
  .reginfo       0x0000000000000000       0x18 ../objs/main.o
  .MIPS.abiflags
                 0x0000000000000000       0x18 ../objs/main.o
- .text          0x0000000000000000        0x0 /tmp/ccmGEvHN.o
- .data          0x0000000000000000        0x0 /tmp/ccmGEvHN.o
- .bss           0x0000000000000000        0x0 /tmp/ccmGEvHN.o
- .reginfo       0x0000000000000000       0x18 /tmp/ccmGEvHN.o
+ .text          0x0000000000000000        0x0 /tmp/cc2iDNTw.o
+ .data          0x0000000000000000        0x0 /tmp/cc2iDNTw.o
+ .bss           0x0000000000000000        0x0 /tmp/cc2iDNTw.o
+ .reginfo       0x0000000000000000       0x18 /tmp/cc2iDNTw.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 /tmp/ccmGEvHN.o
- .text          0x0000000000000000        0x0 /tmp/ccBufTOl.o
- .data          0x0000000000000000        0x0 /tmp/ccBufTOl.o
- .bss           0x0000000000000000        0x0 /tmp/ccBufTOl.o
- .reginfo       0x0000000000000000       0x18 /tmp/ccBufTOl.o
+                0x0000000000000000       0x18 /tmp/cc2iDNTw.o
+ .text          0x0000000000000000        0x0 /tmp/ccCslG0E.o
+ .data          0x0000000000000000        0x0 /tmp/ccCslG0E.o
+ .bss           0x0000000000000000        0x0 /tmp/ccCslG0E.o
+ .reginfo       0x0000000000000000       0x18 /tmp/ccCslG0E.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 /tmp/ccBufTOl.o
- .text          0x0000000000000000        0x0 /tmp/cctBbRgN.o
- .data          0x0000000000000000        0x0 /tmp/cctBbRgN.o
- .bss           0x0000000000000000        0x0 /tmp/cctBbRgN.o
- .reginfo       0x0000000000000000       0x18 /tmp/cctBbRgN.o
+                0x0000000000000000       0x18 /tmp/ccCslG0E.o
+ .text          0x0000000000000000        0x0 /tmp/cc2WwpHR.o
+ .data          0x0000000000000000        0x0 /tmp/cc2WwpHR.o
+ .bss           0x0000000000000000        0x0 /tmp/cc2WwpHR.o
+ .reginfo       0x0000000000000000       0x18 /tmp/cc2WwpHR.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 /tmp/cctBbRgN.o
- .text          0x0000000000000000        0x0 /tmp/ccdVHDKr.o
- .data          0x0000000000000000        0x0 /tmp/ccdVHDKr.o
- .bss           0x0000000000000000        0x0 /tmp/ccdVHDKr.o
- .reginfo       0x0000000000000000       0x18 /tmp/ccdVHDKr.o
+                0x0000000000000000       0x18 /tmp/cc2WwpHR.o
+ .text          0x0000000000000000        0x0 /tmp/cc4ONM4H.o
+ .data          0x0000000000000000        0x0 /tmp/cc4ONM4H.o
+ .bss           0x0000000000000000        0x0 /tmp/cc4ONM4H.o
+ .reginfo       0x0000000000000000       0x18 /tmp/cc4ONM4H.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 /tmp/ccdVHDKr.o
- .discard       0x0000000000000000        0x4 /tmp/ccdVHDKr.o
+                0x0000000000000000       0x18 /tmp/cc4ONM4H.o
+ .discard       0x0000000000000000        0x4 /tmp/cc4ONM4H.o
  .data          0x0000000000000000        0x0 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
  .bss           0x0000000000000000        0x0 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
  .reginfo       0x0000000000000000       0x18 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
@@ -1089,16 +1088,16 @@ END GROUP
 
 .reset          0x00000000bfc00000      0x1c4
  *(.reset)
- .reset         0x00000000bfc00000       0x18 /tmp/ccmGEvHN.o
+ .reset         0x00000000bfc00000       0x18 /tmp/cc2iDNTw.o
                 0x00000000bfc00000                _reset
  *(.reset.startup)
  .reset.startup
-                0x00000000bfc00018      0x1ac /tmp/ccmGEvHN.o
+                0x00000000bfc00018      0x1ac /tmp/cc2iDNTw.o
                 0x00000000bfc00018                _startup
 
 .bev_excpt      0x00000000bfc00380       0x10
  *(.bev_handler)
- .bev_handler   0x00000000bfc00380       0x10 /tmp/ccmGEvHN.o
+ .bev_handler   0x00000000bfc00380       0x10 /tmp/cc2iDNTw.o
 
 .cache_init     0x00000000bfc004b0      0x1c0
  *(.cache_init)
@@ -1113,17 +1112,17 @@ END GROUP
                 0x000000009d000000       0x10
  *(.simple_tlb_refill_vector)
  .simple_tlb_refill_vector
-                0x000000009d000000       0x10 /tmp/ccmGEvHN.o
+                0x000000009d000000       0x10 /tmp/cc2iDNTw.o
 
 .cache_err_excpt
                 0x000000009d000100       0x10
  *(.cache_err_vector)
  .cache_err_vector
-                0x000000009d000100       0x10 /tmp/ccmGEvHN.o
+                0x000000009d000100       0x10 /tmp/cc2iDNTw.o
 
 .app_excpt      0x000000009d000180       0x10
  *(.gen_handler)
- .gen_handler   0x000000009d000180       0x10 /tmp/ccmGEvHN.o
+ .gen_handler   0x000000009d000180       0x10 /tmp/cc2iDNTw.o
 
 .vectors        0x000000009d000200       0x60
                 0x000000009d000200                . = ALIGN (0x4)
@@ -2220,7 +2219,7 @@ END GROUP
  *.elf(.debug_pubnames)
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x2a22
+.debug_info     0x0000000000000000     0x2a66
  *.elf(.debug_info .gnu.linkonce.wi.*)
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x531 ../objs/CIPS/peripheral/uart/plib_uart3.o
@@ -2234,12 +2233,12 @@ END GROUP
  .debug_info    0x0000000000002376      0x109 ../objs/CIPS/exceptions.o
  .debug_info    0x000000000000247f      0x103 ../objs/CIPS/interrupts.o
  .debug_info    0x0000000000002582      0x31b ../objs/CIPS/initialization.o
- .debug_info    0x000000000000289d       0xc7 ../objs/main.o
- .debug_info    0x0000000000002964       0x3f /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
- .debug_info    0x00000000000029a3       0x3f /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
- .debug_info    0x00000000000029e2       0x40 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
+ .debug_info    0x000000000000289d      0x10b ../objs/main.o
+ .debug_info    0x00000000000029a8       0x3f /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
+ .debug_info    0x00000000000029e7       0x3f /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
+ .debug_info    0x0000000000002a26       0x40 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
 
-.debug_abbrev   0x0000000000000000      0xead
+.debug_abbrev   0x0000000000000000      0xee3
  *.elf(.debug_abbrev)
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x1c6 ../objs/CIPS/peripheral/uart/plib_uart3.o
@@ -2253,12 +2252,12 @@ END GROUP
  .debug_abbrev  0x0000000000000b7a       0x67 ../objs/CIPS/exceptions.o
  .debug_abbrev  0x0000000000000be1       0x81 ../objs/CIPS/interrupts.o
  .debug_abbrev  0x0000000000000c62      0x149 ../objs/CIPS/initialization.o
- .debug_abbrev  0x0000000000000dab       0x75 ../objs/main.o
- .debug_abbrev  0x0000000000000e20       0x2e /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
- .debug_abbrev  0x0000000000000e4e       0x2e /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
- .debug_abbrev  0x0000000000000e7c       0x31 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
+ .debug_abbrev  0x0000000000000dab       0xab ../objs/main.o
+ .debug_abbrev  0x0000000000000e56       0x2e /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
+ .debug_abbrev  0x0000000000000e84       0x2e /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
+ .debug_abbrev  0x0000000000000eb2       0x31 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
 
-.debug_line     0x0000000000000000     0x1e98
+.debug_line     0x0000000000000000     0x1f9a
  *.elf(.debug_line)
  *(.debug_line)
  .debug_line    0x0000000000000000      0x50b ../objs/CIPS/peripheral/uart/plib_uart3.o
@@ -2272,12 +2271,12 @@ END GROUP
  .debug_line    0x000000000000167a      0x131 ../objs/CIPS/exceptions.o
  .debug_line    0x00000000000017ab       0xe0 ../objs/CIPS/interrupts.o
  .debug_line    0x000000000000188b      0x358 ../objs/CIPS/initialization.o
- .debug_line    0x0000000000001be3       0x9f ../objs/main.o
- .debug_line    0x0000000000001c82       0xa5 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
- .debug_line    0x0000000000001d27       0xa9 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
- .debug_line    0x0000000000001dd0       0xc8 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
+ .debug_line    0x0000000000001be3      0x1a1 ../objs/main.o
+ .debug_line    0x0000000000001d84       0xa5 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
+ .debug_line    0x0000000000001e29       0xa9 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
+ .debug_line    0x0000000000001ed2       0xc8 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
 
-.debug_frame    0x0000000000000000      0x83c
+.debug_frame    0x0000000000000000      0x840
  *.elf(.debug_frame)
  *(.debug_frame)
  .debug_frame   0x0000000000000000      0x104 ../objs/CIPS/peripheral/uart/plib_uart3.o
@@ -2291,12 +2290,12 @@ END GROUP
  .debug_frame   0x00000000000005b0       0x70 ../objs/CIPS/exceptions.o
  .debug_frame   0x0000000000000620      0x168 ../objs/CIPS/interrupts.o
  .debug_frame   0x0000000000000788       0x2c ../objs/CIPS/initialization.o
- .debug_frame   0x00000000000007b4       0x28 ../objs/main.o
- .debug_frame   0x00000000000007dc       0x20 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
- .debug_frame   0x00000000000007fc       0x20 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
- .debug_frame   0x000000000000081c       0x20 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
+ .debug_frame   0x00000000000007b4       0x2c ../objs/main.o
+ .debug_frame   0x00000000000007e0       0x20 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
+ .debug_frame   0x0000000000000800       0x20 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
+ .debug_frame   0x0000000000000820       0x20 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
 
-.debug_str      0x0000000000000000     0x3c32
+.debug_str      0x0000000000000000     0x3c55
  *.elf(.debug_str)
  *(.debug_str)
  .debug_str     0x0000000000000000      0x530 ../objs/CIPS/peripheral/uart/plib_uart3.o
@@ -2310,10 +2309,10 @@ END GROUP
  .debug_str     0x0000000000002477      0x383 ../objs/CIPS/exceptions.o
  .debug_str     0x00000000000027fa      0x342 ../objs/CIPS/interrupts.o
  .debug_str     0x0000000000002b3c      0x432 ../objs/CIPS/initialization.o
- .debug_str     0x0000000000002f6e      0x2e8 ../objs/main.o
- .debug_str     0x0000000000003256      0x33e /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
- .debug_str     0x0000000000003594      0x346 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
- .debug_str     0x00000000000038da      0x358 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
+ .debug_str     0x0000000000002f6e      0x30b ../objs/main.o
+ .debug_str     0x0000000000003279      0x33e /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
+ .debug_str     0x00000000000035b7      0x346 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
+ .debug_str     0x00000000000038fd      0x358 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
 
 .debug_loc      0x0000000000000000      0xa17
  *.elf(.debug_loc)
@@ -2400,13 +2399,13 @@ END GROUP
  .gnu.attributes
                 0x00000000000000c0       0x10 ../objs/main.o
  .gnu.attributes
-                0x00000000000000d0       0x10 /tmp/ccmGEvHN.o
+                0x00000000000000d0       0x10 /tmp/cc2iDNTw.o
  .gnu.attributes
-                0x00000000000000e0       0x10 /tmp/ccBufTOl.o
+                0x00000000000000e0       0x10 /tmp/ccCslG0E.o
  .gnu.attributes
-                0x00000000000000f0       0x10 /tmp/cctBbRgN.o
+                0x00000000000000f0       0x10 /tmp/cc2WwpHR.o
  .gnu.attributes
-                0x0000000000000100       0x10 /tmp/ccdVHDKr.o
+                0x0000000000000100       0x10 /tmp/cc4ONM4H.o
  .gnu.attributes
                 0x0000000000000110       0x10 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
  .gnu.attributes
@@ -2515,10 +2514,10 @@ LOAD ../objs/CIPS/exceptions.o
 LOAD ../objs/CIPS/interrupts.o
 LOAD ../objs/CIPS/initialization.o
 LOAD ../objs/main.o
-LOAD /tmp/ccmGEvHN.o
-LOAD /tmp/ccBufTOl.o
-LOAD /tmp/cctBbRgN.o
-LOAD /tmp/ccdVHDKr.o
+LOAD /tmp/cc2iDNTw.o
+LOAD /tmp/ccCslG0E.o
+LOAD /tmp/cc2WwpHR.o
+LOAD /tmp/cc4ONM4H.o
 LOAD /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
 LOAD /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/fpu64/libgcc.a
 START GROUP
@@ -2545,72 +2544,72 @@ LOAD stack
 .__vector_offset_BF810540_data
                 0x00000000bf810540       0xe8
  .__vector_offset_BF810540_data
-                0x00000000bf810540       0xe8 /tmp/cctBbRgN.o
+                0x00000000bf810540       0xe8 /tmp/cc2WwpHR.o
 
 .__vector_offset_BF81079C_data
                 0x00000000bf81079c       0x64
  .__vector_offset_BF81079C_data
-                0x00000000bf81079c       0x64 /tmp/cctBbRgN.o
+                0x00000000bf81079c       0x64 /tmp/cc2WwpHR.o
 
 .__vector_offset_BF810740_data
                 0x00000000bf810740       0x50
  .__vector_offset_BF810740_data
-                0x00000000bf810740       0x50 /tmp/cctBbRgN.o
+                0x00000000bf810740       0x50 /tmp/cc2WwpHR.o
 
 .__vector_offset_BF81062C_data
                 0x00000000bf81062c       0x4c
  .__vector_offset_BF81062C_data
-                0x00000000bf81062c       0x4c /tmp/cctBbRgN.o
+                0x00000000bf81062c       0x4c /tmp/cc2WwpHR.o
 
 .__vector_offset_BF8106F4_data
                 0x00000000bf8106f4       0x24
  .__vector_offset_BF8106F4_data
-                0x00000000bf8106f4       0x24 /tmp/cctBbRgN.o
+                0x00000000bf8106f4       0x24 /tmp/cc2WwpHR.o
 
 .__vector_offset_BF81071C_data
                 0x00000000bf81071c       0x18
  .__vector_offset_BF81071C_data
-                0x00000000bf81071c       0x18 /tmp/cctBbRgN.o
+                0x00000000bf81071c       0x18 /tmp/cc2WwpHR.o
 
 .__vector_offset_BF81080C_data
                 0x00000000bf81080c       0x18
  .__vector_offset_BF81080C_data
-                0x00000000bf81080c       0x18 /tmp/cctBbRgN.o
+                0x00000000bf81080c       0x18 /tmp/cc2WwpHR.o
 
 .__vector_offset_BF810874_data
                 0x00000000bf810874       0x18
  .__vector_offset_BF810874_data
-                0x00000000bf810874       0x18 /tmp/cctBbRgN.o
+                0x00000000bf810874       0x18 /tmp/cc2WwpHR.o
 
 .__vector_offset_BF8106D8_data
                 0x00000000bf8106d8       0x14
  .__vector_offset_BF8106D8_data
-                0x00000000bf8106d8       0x14 /tmp/cctBbRgN.o
+                0x00000000bf8106d8       0x14 /tmp/cc2WwpHR.o
 
 .__vector_offset_BF810858_data
                 0x00000000bf810858       0x14
  .__vector_offset_BF810858_data
-                0x00000000bf810858       0x14 /tmp/cctBbRgN.o
+                0x00000000bf810858       0x14 /tmp/cc2WwpHR.o
 
 .__vector_offset_BF810830_data
                 0x00000000bf810830        0xc
  .__vector_offset_BF810830_data
-                0x00000000bf810830        0xc /tmp/cctBbRgN.o
+                0x00000000bf810830        0xc /tmp/cc2WwpHR.o
 
 .__vector_offset_BF810840_data
                 0x00000000bf810840        0xc
  .__vector_offset_BF810840_data
-                0x00000000bf810840        0xc /tmp/cctBbRgN.o
+                0x00000000bf810840        0xc /tmp/cc2WwpHR.o
 
 .__vector_offset_BF810850_data
                 0x00000000bf810850        0x4
  .__vector_offset_BF810850_data
-                0x00000000bf810850        0x4 /tmp/cctBbRgN.o
+                0x00000000bf810850        0x4 /tmp/cc2WwpHR.o
 
 .__vector_offset_BF810894_data
                 0x00000000bf810894        0x4
  .__vector_offset_BF810894_data
-                0x00000000bf810894        0x4 /tmp/cctBbRgN.o
+                0x00000000bf810894        0x4 /tmp/cc2WwpHR.o
 
 ._debug_exception
                 0x00000000bfc00480       0x2c
@@ -2733,92 +2732,98 @@ LOAD stack
 .text.main_entry
                 0x000000009d000e7c       0x54
  .text.main_entry
-                0x000000009d000e7c       0x54 /tmp/ccmGEvHN.o
+                0x000000009d000e7c       0x54 /tmp/cc2iDNTw.o
                 0x000000009d000eb0                __crt0_exit
 
+.text.CORETIMER_DelayMs
+                0x000000009d000ed0       0x4c
+ .text.CORETIMER_DelayMs
+                0x000000009d000ed0       0x4c ../objs/CIPS/peripheral/coretimer/plib_coretimer.o
+                0x000000009d000ed0                CORETIMER_DelayMs
+
 .text.TIMER_2_InterruptHandler
-                0x000000009d000ed0       0x48
+                0x000000009d000f1c       0x48
  .text.TIMER_2_InterruptHandler
-                0x000000009d000ed0       0x48 ../objs/CIPS/peripheral/tmr/plib_tmr2.o
-                0x000000009d000ed0                TIMER_2_InterruptHandler
+                0x000000009d000f1c       0x48 ../objs/CIPS/peripheral/tmr/plib_tmr2.o
+                0x000000009d000f1c                TIMER_2_InterruptHandler
 
 .text.TIMER_1_InterruptHandler
-                0x000000009d000f18       0x48
+                0x000000009d000f64       0x48
  .text.TIMER_1_InterruptHandler
-                0x000000009d000f18       0x48 ../objs/CIPS/peripheral/tmr1/plib_tmr1.o
-                0x000000009d000f18                TIMER_1_InterruptHandler
+                0x000000009d000f64       0x48 ../objs/CIPS/peripheral/tmr1/plib_tmr1.o
+                0x000000009d000f64                TIMER_1_InterruptHandler
 
-.text           0x000000009d000f60       0x44
- .text          0x000000009d000f60       0x44 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
-                0x000000009d000f60                __pic32_software_reset
+.text           0x000000009d000fac       0x44
+ .text          0x000000009d000fac       0x44 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
+                0x000000009d000fac                __pic32_software_reset
 
 .text.TMR2_Initialize
-                0x000000009d000fa4       0x3c
+                0x000000009d000ff0       0x3c
  .text.TMR2_Initialize
-                0x000000009d000fa4       0x3c ../objs/CIPS/peripheral/tmr/plib_tmr2.o
-                0x000000009d000fa4                TMR2_Initialize
+                0x000000009d000ff0       0x3c ../objs/CIPS/peripheral/tmr/plib_tmr2.o
+                0x000000009d000ff0                TMR2_Initialize
 
 .text.CORETIMER_Initialize
-                0x000000009d000fe0       0x3c
+                0x000000009d00102c       0x3c
  .text.CORETIMER_Initialize
-                0x000000009d000fe0       0x3c ../objs/CIPS/peripheral/coretimer/plib_coretimer.o
-                0x000000009d000fe0                CORETIMER_Initialize
+                0x000000009d00102c       0x3c ../objs/CIPS/peripheral/coretimer/plib_coretimer.o
+                0x000000009d00102c                CORETIMER_Initialize
 
 .text.TMR1_Initialize
-                0x000000009d00101c       0x3c
+                0x000000009d001068       0x3c
  .text.TMR1_Initialize
-                0x000000009d00101c       0x3c ../objs/CIPS/peripheral/tmr1/plib_tmr1.o
-                0x000000009d00101c                TMR1_Initialize
+                0x000000009d001068       0x3c ../objs/CIPS/peripheral/tmr1/plib_tmr1.o
+                0x000000009d001068                TMR1_Initialize
 
 .text.UART3_Initialize
-                0x000000009d001058       0x38
+                0x000000009d0010a4       0x38
  .text.UART3_Initialize
-                0x000000009d001058       0x38 ../objs/CIPS/peripheral/uart/plib_uart3.o
-                0x000000009d001058                UART3_Initialize
+                0x000000009d0010a4       0x38 ../objs/CIPS/peripheral/uart/plib_uart3.o
+                0x000000009d0010a4                UART3_Initialize
 
-.text           0x000000009d001090       0x20
- .text          0x000000009d001090       0x20 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_data_init_copy.o)
-                0x000000009d001090                __dinit_copy_needed
-                0x000000009d001090                __dinit_copy
+.text.main      0x000000009d0010dc       0x34
+ .text.main     0x000000009d0010dc       0x34 ../objs/main.o
+                0x000000009d0010dc                main
+
+.text           0x000000009d001110       0x20
+ .text          0x000000009d001110       0x20 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_data_init_copy.o)
+                0x000000009d001110                __dinit_copy_needed
+                0x000000009d001110                __dinit_copy
 
 .MIPS.abiflags  0x000000009d0001e8       0x18
  .MIPS.abiflags
                 0x000000009d0001e8       0x18 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/debug-exception-return.o
 
 .text._general_exception_handler
-                0x000000009d0010b0       0x18
+                0x000000009d001130       0x18
  .text._general_exception_handler
-                0x000000009d0010b0       0x18 ../objs/CIPS/exceptions.o
-                0x000000009d0010b0                _general_exception_handler
+                0x000000009d001130       0x18 ../objs/CIPS/exceptions.o
+                0x000000009d001130                _general_exception_handler
 
 .text._bootstrap_exception_handler
-                0x000000009d0010c8       0x18
+                0x000000009d001148       0x18
  .text._bootstrap_exception_handler
-                0x000000009d0010c8       0x18 ../objs/CIPS/exceptions.o
-                0x000000009d0010c8                _bootstrap_exception_handler
+                0x000000009d001148       0x18 ../objs/CIPS/exceptions.o
+                0x000000009d001148                _bootstrap_exception_handler
 
 .text._cache_err_exception_handler
-                0x000000009d0010e0       0x18
+                0x000000009d001160       0x18
  .text._cache_err_exception_handler
-                0x000000009d0010e0       0x18 ../objs/CIPS/exceptions.o
-                0x000000009d0010e0                _cache_err_exception_handler
+                0x000000009d001160       0x18 ../objs/CIPS/exceptions.o
+                0x000000009d001160                _cache_err_exception_handler
 
 .text._simple_tlb_refill_exception_handler
-                0x000000009d0010f8       0x18
+                0x000000009d001178       0x18
  .text._simple_tlb_refill_exception_handler
-                0x000000009d0010f8       0x18 ../objs/CIPS/exceptions.o
-                0x000000009d0010f8                _simple_tlb_refill_exception_handler
+                0x000000009d001178       0x18 ../objs/CIPS/exceptions.o
+                0x000000009d001178                _simple_tlb_refill_exception_handler
 
-.text.main      0x000000009d001110       0x18
- .text.main     0x000000009d001110       0x18 ../objs/main.o
-                0x000000009d001110                main
-
-.text           0x000000009d001128       0x30
- .text          0x000000009d001128       0x18 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-nmi-handler.o)
-                0x000000009d001128                _nmi_handler
- .text          0x000000009d001140       0x18 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_data_init_clear.o)
-                0x000000009d001140                __dinit_clear
-                0x000000009d001140                __dinit_clear_needed
+.text           0x000000009d001190       0x30
+ .text          0x000000009d001190       0x18 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-nmi-handler.o)
+                0x000000009d001190                _nmi_handler
+ .text          0x000000009d0011a8       0x18 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_data_init_clear.o)
+                0x000000009d0011a8                __dinit_clear
+                0x000000009d0011a8                __dinit_clear_needed
 
 .rodata         0x000000009d0000ec       0x14
  .rodata        0x000000009d0000ec       0x14 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_data_init_core.o)
