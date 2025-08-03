@@ -1,4 +1,9 @@
-DEVICE := 32MZ1024EFH100
+# Name of the project binary
+MODULE    	:= VS_XC32_CNC
+
+# Device configuration
+# The device is expected to be a PIC32MZ family device.
+DEVICE 		:= 32MZ1024EFH064
 
 # Compiler location and DFP (Device Family Pack) location
 # The compiler location is expected to be the path to the xc32-gcc compiler.
@@ -14,7 +19,7 @@ DFP_DIR := $(DFP_LOCATION)/$(DFP)
 DFP_INCLUDE := $(DFP_DIR)/include
 
 
-# Project directories expected in the project root
+# Project directories expected in the project.
 # These directories are created if they do not exist when "make build_dir" is run.
 # The directories are used to store object files, binaries, source files, include files, and other files.
 # The directories are created relative to the project root directory.
@@ -24,8 +29,7 @@ DFP_INCLUDE := $(DFP_DIR)/include
 # The incs directory is used to store header files.
 # The bins directory is used to store binaries.
 # The other directory is used to store other files such as maps and XML files.
-MODULE := main
-ROOT      := ..
+ROOT     := ..
 OBJ_DIR  := $(ROOT)/objs
 INC_DIR  := $(ROOT)/incs
 BIN_DIR  := $(ROOT)/bins
@@ -35,9 +39,7 @@ OUT_DIR  := $(ROOT)/other
 # Source files and object files
 # The source files are expected to be in the srcs directory & sub-directories.
 # The source files are expected to have the .c extension.
-# The object files are created with the .o extension.
-# The object files are created in the objs directory with the same subdirectory structure as the srcs directory.
-# The object files are created with the same name as the source files, but with the .o extension.
+# The object file list is created from the SRCS variable with the .o extension inplaceof the .c extension.
 SRCS      := $(shell find $(ROOT)/srcs -type f -name '*.c')
 OBJS 	  := $(SRCS:$(ROOT)/srcs/%.c=$(OBJ_DIR)/%.o)
 
@@ -72,7 +74,7 @@ DIRECT_LINK := $(CC)  $(MCU) -DXPRJ_default=default -mdfp="/opt/microchip/mplabx
 
 
 # Define the default target (which is built when make is invoked without any arguments)
-$(BIN_DIR)/all: $(OBJS)
+$(BIN_DIR)/$(MODULE): $(OBJS)
 	@echo "Building project for $(DEVICE)"
 	@echo "Linking object files to create the final executable"
 	$(DIRECT_LINK) -o $@ $^ 

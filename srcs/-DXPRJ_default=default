@@ -1,8 +1,38 @@
-../objs/init.o: ../srcs/init.c ../incs/init.h ../incs/xc.h \
- ../incs/xc-pic32m.h
+../objs/main.o: ../srcs/main.c ../incs/CIPS/definitions.h \
+ ../incs/CIPS/peripheral/coretimer/plib_coretimer.h \
+ ../incs/CIPS/peripheral/uart/plib_uart3.h ../incs/CIPS/device.h \
+ ../incs/toolchain_specifics.h \
+ ../incs/CIPS/peripheral/uart/plib_uart_common.h \
+ ../incs/CIPS/peripheral/tmr/plib_tmr2.h \
+ ../incs/CIPS/peripheral/tmr/plib_tmr_common.h \
+ ../incs/CIPS/peripheral/clk/plib_clk.h \
+ ../incs/CIPS/peripheral/gpio/plib_gpio.h \
+ ../incs/CIPS/peripheral/evic/plib_evic.h \
+ ../incs/CIPS/peripheral/tmr1/plib_tmr1.h \
+ ../incs/CIPS/peripheral/tmr1/plib_tmr1_common.h
 
-../incs/init.h:
+../incs/CIPS/definitions.h:
 
-../incs/xc.h:
+../incs/CIPS/peripheral/coretimer/plib_coretimer.h:
 
-../incs/xc-pic32m.h:
+../incs/CIPS/peripheral/uart/plib_uart3.h:
+
+../incs/CIPS/device.h:
+
+../incs/toolchain_specifics.h:
+
+../incs/CIPS/peripheral/uart/plib_uart_common.h:
+
+../incs/CIPS/peripheral/tmr/plib_tmr2.h:
+
+../incs/CIPS/peripheral/tmr/plib_tmr_common.h:
+
+../incs/CIPS/peripheral/clk/plib_clk.h:
+
+../incs/CIPS/peripheral/gpio/plib_gpio.h:
+
+../incs/CIPS/peripheral/evic/plib_evic.h:
+
+../incs/CIPS/peripheral/tmr1/plib_tmr1.h:
+
+../incs/CIPS/peripheral/tmr1/plib_tmr1_common.h:
