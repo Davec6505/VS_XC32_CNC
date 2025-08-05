@@ -3,27 +3,27 @@ Optional file vector_offset_init.o not found
 Archive member included to satisfy reference by file (symbol)
 
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-bootstrap-exception-handler.o)
-                              /tmp/ccEIDiUy.o (_bootstrap_exception_handler)
+                              /tmp/cca66M1L.o (_bootstrap_exception_handler)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
-                              /tmp/ccEIDiUy.o (_on_reset)
+                              /tmp/cca66M1L.o (_on_reset)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
-                              /tmp/ccEIDiUy.o (_on_bootstrap)
+                              /tmp/cca66M1L.o (_on_bootstrap)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-nmi-handler.o)
-                              /tmp/ccEIDiUy.o (_nmi_handler)
+                              /tmp/cca66M1L.o (_nmi_handler)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_data_init_core.o)
-                              /tmp/ccEIDiUy.o (__pic32_data_init)
+                              /tmp/cca66M1L.o (__pic32_data_init)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_init_cache.o)
-                              /tmp/ccEIDiUy.o (__pic32_init_cache)
+                              /tmp/cca66M1L.o (__pic32_init_cache)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_init_tlb_ebi_sqi.o)
-                              /tmp/ccEIDiUy.o (__pic32_tlb_init_ebi_sqi)
+                              /tmp/cca66M1L.o (__pic32_tlb_init_ebi_sqi)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(general-exception.o)
-                              /tmp/ccEIDiUy.o (_general_exception_context)
+                              /tmp/cca66M1L.o (_general_exception_context)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(cache-err-exception.o)
-                              /tmp/ccEIDiUy.o (_cache_err_exception_context)
+                              /tmp/cca66M1L.o (_cache_err_exception_context)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(simple-tlb-refill-exception.o)
-                              /tmp/ccEIDiUy.o (_simple_tlb_refill_exception_context)
+                              /tmp/cca66M1L.o (_simple_tlb_refill_exception_context)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
-                              /tmp/ccNmWlJN.o (_DefaultInterrupt)
+                              /tmp/ccW2X0ny.o (_DefaultInterrupt)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-general-exception-handler.o)
                               /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(general-exception.o) (_general_exception_handler)
 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-cache-err-exception-handler.o)
@@ -105,8 +105,8 @@ Microchip PIC32 Memory-Usage Report By Module
         text        data         bss         dec         hex    basename                                         filename
 --------------------------------------------------------------------------------
          944           0           0         944         3b0    data_init                                    data_init
-           0         776           0         776         308    ccmqaMpI.o                                   /tmp/ccmqaMpI.o
-         600           0           0         600         258    ccEIDiUy.o                                   /tmp/ccEIDiUy.o
+           0         776           0         776         308    cchPkEOz.o                                   /tmp/cchPkEOz.o
+         600           0           0         600         258    cca66M1L.o                                   /tmp/cca66M1L.o
          448          36           0         484         1e4    pic32_init_cache.o                           libpic32.a
          220           0           0         220          dc    general-exception.o                          libpic32.a
          216           0           0         216          d8    simple-tlb-refill-exception.o                libpic32.a
@@ -147,31 +147,31 @@ Discarded input sections
                 0x0000000000000000       0x18 ../objs/main.o
  .text.CPU_Initialize
                 0x0000000000000000        0x8 ../objs/main.o
- .text          0x0000000000000000        0x0 /tmp/ccEIDiUy.o
- .data          0x0000000000000000        0x0 /tmp/ccEIDiUy.o
- .bss           0x0000000000000000        0x0 /tmp/ccEIDiUy.o
- .reginfo       0x0000000000000000       0x18 /tmp/ccEIDiUy.o
+ .text          0x0000000000000000        0x0 /tmp/cca66M1L.o
+ .data          0x0000000000000000        0x0 /tmp/cca66M1L.o
+ .bss           0x0000000000000000        0x0 /tmp/cca66M1L.o
+ .reginfo       0x0000000000000000       0x18 /tmp/cca66M1L.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 /tmp/ccEIDiUy.o
- .text          0x0000000000000000        0x0 /tmp/ccv4PYzC.o
- .data          0x0000000000000000        0x0 /tmp/ccv4PYzC.o
- .bss           0x0000000000000000        0x0 /tmp/ccv4PYzC.o
- .reginfo       0x0000000000000000       0x18 /tmp/ccv4PYzC.o
+                0x0000000000000000       0x18 /tmp/cca66M1L.o
+ .text          0x0000000000000000        0x0 /tmp/cc64M3e8.o
+ .data          0x0000000000000000        0x0 /tmp/cc64M3e8.o
+ .bss           0x0000000000000000        0x0 /tmp/cc64M3e8.o
+ .reginfo       0x0000000000000000       0x18 /tmp/cc64M3e8.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 /tmp/ccv4PYzC.o
- .text          0x0000000000000000        0x0 /tmp/ccmqaMpI.o
- .data          0x0000000000000000        0x0 /tmp/ccmqaMpI.o
- .bss           0x0000000000000000        0x0 /tmp/ccmqaMpI.o
- .reginfo       0x0000000000000000       0x18 /tmp/ccmqaMpI.o
+                0x0000000000000000       0x18 /tmp/cc64M3e8.o
+ .text          0x0000000000000000        0x0 /tmp/cchPkEOz.o
+ .data          0x0000000000000000        0x0 /tmp/cchPkEOz.o
+ .bss           0x0000000000000000        0x0 /tmp/cchPkEOz.o
+ .reginfo       0x0000000000000000       0x18 /tmp/cchPkEOz.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 /tmp/ccmqaMpI.o
- .text          0x0000000000000000        0x0 /tmp/ccNmWlJN.o
- .data          0x0000000000000000        0x0 /tmp/ccNmWlJN.o
- .bss           0x0000000000000000        0x0 /tmp/ccNmWlJN.o
- .reginfo       0x0000000000000000       0x18 /tmp/ccNmWlJN.o
+                0x0000000000000000       0x18 /tmp/cchPkEOz.o
+ .text          0x0000000000000000        0x0 /tmp/ccW2X0ny.o
+ .data          0x0000000000000000        0x0 /tmp/ccW2X0ny.o
+ .bss           0x0000000000000000        0x0 /tmp/ccW2X0ny.o
+ .reginfo       0x0000000000000000       0x18 /tmp/ccW2X0ny.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 /tmp/ccNmWlJN.o
- .discard       0x0000000000000000        0x4 /tmp/ccNmWlJN.o
+                0x0000000000000000       0x18 /tmp/ccW2X0ny.o
+ .discard       0x0000000000000000        0x4 /tmp/ccW2X0ny.o
  .data          0x0000000000000000        0x0 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
  .bss           0x0000000000000000        0x0 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
  .reginfo       0x0000000000000000       0x18 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
@@ -925,16 +925,16 @@ END GROUP
 
 .reset          0x00000000bfc00000      0x1c4
  *(.reset)
- .reset         0x00000000bfc00000       0x18 /tmp/ccEIDiUy.o
+ .reset         0x00000000bfc00000       0x18 /tmp/cca66M1L.o
                 0x00000000bfc00000                _reset
  *(.reset.startup)
  .reset.startup
-                0x00000000bfc00018      0x1ac /tmp/ccEIDiUy.o
+                0x00000000bfc00018      0x1ac /tmp/cca66M1L.o
                 0x00000000bfc00018                _startup
 
 .bev_excpt      0x00000000bfc00380       0x10
  *(.bev_handler)
- .bev_handler   0x00000000bfc00380       0x10 /tmp/ccEIDiUy.o
+ .bev_handler   0x00000000bfc00380       0x10 /tmp/cca66M1L.o
 
 .cache_init     0x00000000bfc004b0      0x1c0
  *(.cache_init)
@@ -949,17 +949,17 @@ END GROUP
                 0x000000009d000000       0x10
  *(.simple_tlb_refill_vector)
  .simple_tlb_refill_vector
-                0x000000009d000000       0x10 /tmp/ccEIDiUy.o
+                0x000000009d000000       0x10 /tmp/cca66M1L.o
 
 .cache_err_excpt
                 0x000000009d000100       0x10
  *(.cache_err_vector)
  .cache_err_vector
-                0x000000009d000100       0x10 /tmp/ccEIDiUy.o
+                0x000000009d000100       0x10 /tmp/cca66M1L.o
 
 .app_excpt      0x000000009d000180       0x10
  *(.gen_handler)
- .gen_handler   0x000000009d000180       0x10 /tmp/ccEIDiUy.o
+ .gen_handler   0x000000009d000180       0x10 /tmp/cca66M1L.o
 
 .vectors        0x000000009d000200       0x48
                 0x000000009d000200                . = ALIGN (0x4)
@@ -2130,13 +2130,13 @@ END GROUP
  .gnu.attributes
                 0x0000000000000010       0x10 ../objs/main.o
  .gnu.attributes
-                0x0000000000000020       0x10 /tmp/ccEIDiUy.o
+                0x0000000000000020       0x10 /tmp/cca66M1L.o
  .gnu.attributes
-                0x0000000000000030       0x10 /tmp/ccv4PYzC.o
+                0x0000000000000030       0x10 /tmp/cc64M3e8.o
  .gnu.attributes
-                0x0000000000000040       0x10 /tmp/ccmqaMpI.o
+                0x0000000000000040       0x10 /tmp/cchPkEOz.o
  .gnu.attributes
-                0x0000000000000050       0x10 /tmp/ccNmWlJN.o
+                0x0000000000000050       0x10 /tmp/ccW2X0ny.o
  .gnu.attributes
                 0x0000000000000060       0x10 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
  .gnu.attributes
@@ -2240,10 +2240,10 @@ END GROUP
                 0x00000000bfc00678                __pic32_tlb_init_values_count = 0x8
                 0x0000000000000200                _min_heap_size = 0x200
 LOAD ../objs/main.o
-LOAD /tmp/ccEIDiUy.o
-LOAD /tmp/ccv4PYzC.o
-LOAD /tmp/ccmqaMpI.o
-LOAD /tmp/ccNmWlJN.o
+LOAD /tmp/cca66M1L.o
+LOAD /tmp/cc64M3e8.o
+LOAD /tmp/cchPkEOz.o
+LOAD /tmp/ccW2X0ny.o
 LOAD /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
 LOAD /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/fpu64/libgcc.a
 START GROUP
@@ -2270,47 +2270,47 @@ LOAD stack
 .__vector_offset_BF810540_data
                 0x00000000bf810540      0x178
  .__vector_offset_BF810540_data
-                0x00000000bf810540      0x178 /tmp/ccmqaMpI.o
+                0x00000000bf810540      0x178 /tmp/cchPkEOz.o
 
 .__vector_offset_BF810740_data
                 0x00000000bf810740       0xfc
  .__vector_offset_BF810740_data
-                0x00000000bf810740       0xfc /tmp/ccmqaMpI.o
+                0x00000000bf810740       0xfc /tmp/cchPkEOz.o
 
 .__vector_offset_BF8106F4_data
                 0x00000000bf8106f4       0x40
  .__vector_offset_BF8106F4_data
-                0x00000000bf8106f4       0x40 /tmp/ccmqaMpI.o
+                0x00000000bf8106f4       0x40 /tmp/cchPkEOz.o
 
 .__vector_offset_BF810874_data
                 0x00000000bf810874       0x18
  .__vector_offset_BF810874_data
-                0x00000000bf810874       0x18 /tmp/ccmqaMpI.o
+                0x00000000bf810874       0x18 /tmp/cchPkEOz.o
 
 .__vector_offset_BF8106D8_data
                 0x00000000bf8106d8       0x14
  .__vector_offset_BF8106D8_data
-                0x00000000bf8106d8       0x14 /tmp/ccmqaMpI.o
+                0x00000000bf8106d8       0x14 /tmp/cchPkEOz.o
 
 .__vector_offset_BF810858_data
                 0x00000000bf810858       0x14
  .__vector_offset_BF810858_data
-                0x00000000bf810858       0x14 /tmp/ccmqaMpI.o
+                0x00000000bf810858       0x14 /tmp/cchPkEOz.o
 
 .__vector_offset_BF810840_data
                 0x00000000bf810840        0xc
  .__vector_offset_BF810840_data
-                0x00000000bf810840        0xc /tmp/ccmqaMpI.o
+                0x00000000bf810840        0xc /tmp/cchPkEOz.o
 
 .__vector_offset_BF810850_data
                 0x00000000bf810850        0x4
  .__vector_offset_BF810850_data
-                0x00000000bf810850        0x4 /tmp/ccmqaMpI.o
+                0x00000000bf810850        0x4 /tmp/cchPkEOz.o
 
 .__vector_offset_BF810894_data
                 0x00000000bf810894        0x4
  .__vector_offset_BF810894_data
-                0x00000000bf810894        0x4 /tmp/ccmqaMpI.o
+                0x00000000bf810894        0x4 /tmp/cchPkEOz.o
 
 ._debug_exception
                 0x00000000bfc00480       0x2c
@@ -2356,7 +2356,7 @@ LOAD stack
 .text.main_entry
                 0x000000009d000110       0x54
  .text.main_entry
-                0x000000009d000110       0x54 /tmp/ccEIDiUy.o
+                0x000000009d000110       0x54 /tmp/cca66M1L.o
                 0x000000009d000144                __crt0_exit
 
 .text._bootstrap_exception_handler
