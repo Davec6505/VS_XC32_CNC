@@ -1,4 +1,6 @@
 
+DFP := $(DFP_DIR)
+
 # Project directories expected in the project.
 # These directories are created if they do not exist when "make build_dir" is run.
 # The directories are used to store object files, binaries, source files, include files, and other files.
@@ -59,17 +61,17 @@ INCS +=   -I$(DFP_INCLUDE)
 
 #Direct the compiler outputs for .o files from .c or .cpp code
 DIRECT_OBJ := $(CC)    -g -x c -c $(MCU)  -ffunction-sections -fdata-sections -O1 -fno-common \
-			$(INCS)  $(FLAGS) -DXPRJ_default=default -mdfp=$(DFP_DIR)
+			$(INCS)  $(FLAGS) -DXPRJ_default=default -mdfp=$(DFP)
 			
 
 # Direct compiler output for linker 
-DIRECT_LINK := $(CC)  $(MCU) -nostartfiles -DXPRJ_default=default -mdfp=$(DFP_DIR) 	\
+DIRECT_LINK := $(CC)  $(MCU) -nostartfiles -DXPRJ_default=default -mdfp=$(DFP) 	\
 			-Wl,--defsym=__MPLAB_BUILD=1,--script="p32MZ1024EFH100.ld",--defsym=_min_heap_size=512,--gc-sections,--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="$(OUT_DIR)/production.map",--memorysummary,$(OUT_DIR)/memoryfile.xml \
 
 
 
 
-DIRECT_ASM :=   -c  -DXPRJ_default=default    -Wa,--defsym=__MPLAB_BUILD=1,-MD=$(OBJ_DIR)/startup/startup.o.asm.d,--gdwarf-2 -mdfp=$(DFP_DIR) -MMD -MF $(OBJ_DIR)/startup/startup.o.d
+DIRECT_ASM :=   -c  -DXPRJ_default=default    -Wa,--defsym=__MPLAB_BUILD=1,-MD=$(OBJ_DIR)/startup/startup.o.asm.d,--gdwarf-2 -mdfp=$(DFP) -MMD -MF $(OBJ_DIR)/startup/startup.o.d
 
 # Define the default target (which is built when make is invoked without any arguments)
 $(BIN_DIR)/$(MODULE): $(OBJS)

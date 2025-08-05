@@ -26,7 +26,7 @@
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include "definitions.h"                // SYS function prototypes
-
+#include "app.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -36,14 +36,13 @@
 
 int main ( void )
 {
-    /* Initialize all modules */
+    /* Initialize all moduales */
     SYS_Initialize ( NULL );
 
     while ( true )
     {
         /* Maintain state machines of all polled MPLAB Harmony modules. */
-        LED1_Toggle();
-        CORETIMER_DelayMs(500);
+        cycle();
     }
 
     /* Execution should not come here during normal operation */

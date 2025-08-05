@@ -14,11 +14,11 @@ DEVICE 		:= 32MZ1024EFH064
 # The DFP is expected to be in the format of Microchip/PIC32MZ-EF_DFP/1.4.168.
 COMPILER_LOCATION := /opt/microchip/xc32/v4.60/bin
 DFP_LOCATION := /opt/microchip/mplabx/v6.25/packs
-DFP := Microchip/PIC32MZ-EF_DFP/1.4.168
+DFP := $(DFP_LOCATION)/Microchip/PIC32MZ-EF_DFP/1.4.168
 
 
 BUILD=make
-CLEAN=make clean
+CLEAN=m
 BUILD_DIR=make build_dir
 #THIRDP_LIB_PATH=/usr/local/mylibs/
 
