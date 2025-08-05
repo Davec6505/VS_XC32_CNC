@@ -49,5 +49,10 @@ clean:
 install:
 	(cd srcs; $(BUILD) install)
 
+load:
+	@echo "#######LOADING OUTPUTS#######"
+	$(shell  ../MikroC_bootloader_lnx/bins/mikro_hb bins/VS_XC32_CNC.hex)
+	@echo "#######LOAD COMPLETE#######"
+
 
 .PHONY: all 3rd-party-libs build_dir clean install
