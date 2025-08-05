@@ -112,7 +112,7 @@ Microchip PIC32 Memory-Usage Report By Module
 --------------------------------------------------------------------------------
         1040           0           0        1040         410    interrupts.o                 ../objs/CIPS/interrupts.o
          928           0           0         928         3a0    data_init                    data_init
-           0         668           0         668         29c    ccfUrtam.o                   /tmp/ccfUrtam.o
+           0         668           0         668         29c    ccskvG9z.o                   /tmp/ccskvG9z.o
          588           0           0         588         24c    startup.o                    ../objs/startup/startup.o
          448          36           0         484         1e4    pic32_init_cache.o           libpic32.a
          244           0           0         244          f4    plib_clk.o                   ../objs/CIPS/peripheral/clk/plib_clk.o
@@ -331,18 +331,18 @@ Discarded input sections
  .reginfo       0x0000000000000000       0x18 ../objs/startup/startup.o
  .MIPS.abiflags
                 0x0000000000000000       0x18 ../objs/startup/startup.o
- .text          0x0000000000000000        0x0 /tmp/cc3qjEal.o
- .data          0x0000000000000000        0x0 /tmp/cc3qjEal.o
- .bss           0x0000000000000000        0x0 /tmp/cc3qjEal.o
- .reginfo       0x0000000000000000       0x18 /tmp/cc3qjEal.o
+ .text          0x0000000000000000        0x0 /tmp/cc7mGsUw.o
+ .data          0x0000000000000000        0x0 /tmp/cc7mGsUw.o
+ .bss           0x0000000000000000        0x0 /tmp/cc7mGsUw.o
+ .reginfo       0x0000000000000000       0x18 /tmp/cc7mGsUw.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 /tmp/cc3qjEal.o
- .text          0x0000000000000000        0x0 /tmp/ccfUrtam.o
- .data          0x0000000000000000        0x0 /tmp/ccfUrtam.o
- .bss           0x0000000000000000        0x0 /tmp/ccfUrtam.o
- .reginfo       0x0000000000000000       0x18 /tmp/ccfUrtam.o
+                0x0000000000000000       0x18 /tmp/cc7mGsUw.o
+ .text          0x0000000000000000        0x0 /tmp/ccskvG9z.o
+ .data          0x0000000000000000        0x0 /tmp/ccskvG9z.o
+ .bss           0x0000000000000000        0x0 /tmp/ccskvG9z.o
+ .reginfo       0x0000000000000000       0x18 /tmp/ccskvG9z.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 /tmp/ccfUrtam.o
+                0x0000000000000000       0x18 /tmp/ccskvG9z.o
  .text          0x0000000000000000        0x0 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
  .data          0x0000000000000000        0x0 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
  .bss           0x0000000000000000        0x0 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
@@ -2350,9 +2350,9 @@ END GROUP
  .gnu.attributes
                 0x00000000000000c0       0x10 ../objs/startup/startup.o
  .gnu.attributes
-                0x00000000000000d0       0x10 /tmp/cc3qjEal.o
+                0x00000000000000d0       0x10 /tmp/cc7mGsUw.o
  .gnu.attributes
-                0x00000000000000e0       0x10 /tmp/ccfUrtam.o
+                0x00000000000000e0       0x10 /tmp/ccskvG9z.o
  .gnu.attributes
                 0x00000000000000f0       0x10 /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
  .gnu.attributes
@@ -2458,8 +2458,8 @@ LOAD ../objs/CIPS/interrupts.o
 LOAD ../objs/CIPS/initialization.o
 LOAD ../objs/main.o
 LOAD ../objs/startup/startup.o
-LOAD /tmp/cc3qjEal.o
-LOAD /tmp/ccfUrtam.o
+LOAD /tmp/cc7mGsUw.o
+LOAD /tmp/ccskvG9z.o
 LOAD /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/fpu64/libgcc.a
 START GROUP
 LOAD /opt/microchip/xc32/v4.60/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64/libpic32.a
@@ -2485,72 +2485,72 @@ LOAD stack
 .__vector_offset_BF810540_data
                 0x00000000bf810540       0xe8
  .__vector_offset_BF810540_data
-                0x00000000bf810540       0xe8 /tmp/ccfUrtam.o
+                0x00000000bf810540       0xe8 /tmp/ccskvG9z.o
 
 .__vector_offset_BF81079C_data
                 0x00000000bf81079c       0x64
  .__vector_offset_BF81079C_data
-                0x00000000bf81079c       0x64 /tmp/ccfUrtam.o
+                0x00000000bf81079c       0x64 /tmp/ccskvG9z.o
 
 .__vector_offset_BF810740_data
                 0x00000000bf810740       0x50
  .__vector_offset_BF810740_data
-                0x00000000bf810740       0x50 /tmp/ccfUrtam.o
+                0x00000000bf810740       0x50 /tmp/ccskvG9z.o
 
 .__vector_offset_BF81062C_data
                 0x00000000bf81062c       0x4c
  .__vector_offset_BF81062C_data
-                0x00000000bf81062c       0x4c /tmp/ccfUrtam.o
+                0x00000000bf81062c       0x4c /tmp/ccskvG9z.o
 
 .__vector_offset_BF8106F4_data
                 0x00000000bf8106f4       0x24
  .__vector_offset_BF8106F4_data
-                0x00000000bf8106f4       0x24 /tmp/ccfUrtam.o
+                0x00000000bf8106f4       0x24 /tmp/ccskvG9z.o
 
 .__vector_offset_BF81071C_data
                 0x00000000bf81071c       0x18
  .__vector_offset_BF81071C_data
-                0x00000000bf81071c       0x18 /tmp/ccfUrtam.o
+                0x00000000bf81071c       0x18 /tmp/ccskvG9z.o
 
 .__vector_offset_BF81080C_data
                 0x00000000bf81080c       0x18
  .__vector_offset_BF81080C_data
-                0x00000000bf81080c       0x18 /tmp/ccfUrtam.o
+                0x00000000bf81080c       0x18 /tmp/ccskvG9z.o
 
 .__vector_offset_BF810874_data
                 0x00000000bf810874       0x18
  .__vector_offset_BF810874_data
-                0x00000000bf810874       0x18 /tmp/ccfUrtam.o
+                0x00000000bf810874       0x18 /tmp/ccskvG9z.o
 
 .__vector_offset_BF8106D8_data
                 0x00000000bf8106d8       0x14
  .__vector_offset_BF8106D8_data
-                0x00000000bf8106d8       0x14 /tmp/ccfUrtam.o
+                0x00000000bf8106d8       0x14 /tmp/ccskvG9z.o
 
 .__vector_offset_BF810858_data
                 0x00000000bf810858       0x14
  .__vector_offset_BF810858_data
-                0x00000000bf810858       0x14 /tmp/ccfUrtam.o
+                0x00000000bf810858       0x14 /tmp/ccskvG9z.o
 
 .__vector_offset_BF810830_data
                 0x00000000bf810830        0xc
  .__vector_offset_BF810830_data
-                0x00000000bf810830        0xc /tmp/ccfUrtam.o
+                0x00000000bf810830        0xc /tmp/ccskvG9z.o
 
 .__vector_offset_BF810840_data
                 0x00000000bf810840        0xc
  .__vector_offset_BF810840_data
-                0x00000000bf810840        0xc /tmp/ccfUrtam.o
+                0x00000000bf810840        0xc /tmp/ccskvG9z.o
 
 .__vector_offset_BF810850_data
                 0x00000000bf810850        0x4
  .__vector_offset_BF810850_data
-                0x00000000bf810850        0x4 /tmp/ccfUrtam.o
+                0x00000000bf810850        0x4 /tmp/ccskvG9z.o
 
 .__vector_offset_BF810894_data
                 0x00000000bf810894        0x4
  .__vector_offset_BF810894_data
-                0x00000000bf810894        0x4 /tmp/ccfUrtam.o
+                0x00000000bf810894        0x4 /tmp/ccskvG9z.o
 
 .config_BFC0FFC0.__config_BFC0FFC0
                 0x00000000bfc0ffc0        0x4

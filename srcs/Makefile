@@ -1,24 +1,3 @@
-# Name of the project binary
-MODULE    	:= VS_XC32_CNC
-
-# Device configuration
-# The device is expected to be a PIC32MZ family device.
-DEVICE 		:= 32MZ1024EFH064
-
-# Compiler location and DFP (Device Family Pack) location
-# The compiler location is expected to be the path to the xc32-gcc compiler.
-# The DFP location is expected to be the path to the Microchip Device Family Pack.
-# The DFP is used to provide the necessary header files and libraries for the specific device.
-# The DFP is expected to be installed in the MPLAB X IDE installation directory.
-# The DFP is expected to be in the packs directory of the MPLAB X IDE installation directory.
-# The DFP is expected to be in the format of Microchip/PIC32MZ-EF_DFP/1.4.168.
-# /opt/microchip/mplabx/v6.25/packs/Microchip/PIC32MZ-EF_DFP/1.4.168" 
-COMPILER_LOCATION := /opt/microchip/xc32/v4.60/bin
-DFP_LOCATION := /opt/microchip/mplabx/v6.25/packs
-DFP := Microchip/PIC32MZ-EF_DFP/1.4.168
-DFP_DIR := $(DFP_LOCATION)/$(DFP)
-DFP_INCLUDE := $(DFP_DIR)/include
-
 
 # Project directories expected in the project.
 # These directories are created if they do not exist when "make build_dir" is run.
