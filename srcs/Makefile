@@ -12,6 +12,7 @@ DEVICE 		:= 32MZ1024EFH064
 # The DFP is expected to be installed in the MPLAB X IDE installation directory.
 # The DFP is expected to be in the packs directory of the MPLAB X IDE installation directory.
 # The DFP is expected to be in the format of Microchip/PIC32MZ-EF_DFP/1.4.168.
+# /opt/microchip/mplabx/v6.25/packs/Microchip/PIC32MZ-EF_DFP/1.4.168" 
 COMPILER_LOCATION := /opt/microchip/xc32/v4.60/bin
 DFP_LOCATION := /opt/microchip/mplabx/v6.25/packs
 DFP := Microchip/PIC32MZ-EF_DFP/1.4.168
@@ -36,13 +37,27 @@ BIN_DIR  := $(ROOT)/bins
 SRC_DIR  := $(ROOT)/srcs
 OUT_DIR  := $(ROOT)/other
 
+
 # Source files and object files
 # The source files are expected to be in the srcs directory & sub-directories.
 # The source files are expected to have the .c extension.
 # The object file list is created from the SRCS variable with the .o extension inplaceof the .c extension.
-SRCS      := $(shell find $(ROOT)/srcs -type f -name '*.c')
-OBJS 	  := $(SRCS:$(ROOT)/srcs/%.c=$(OBJ_DIR)/%.o)
+SRCS      := $(shell find $(SRC_DIR) -type f -name '*.c')
+OBJS 	  := $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
+#ASM  := $(foreach dir,$(DIR),$(wildcard $(dir)/*.S))
+# The assembly files are expected to be in the srcs directory & sub-directories.
+ASM       := $(shell find $(SRC_DIR) -type f -name '*.S')
+ASMS  := $(ASM:$(SRC_DIR)/%.S=$(OBJ_DIR)/%.o)
+
+# The assembly object files are created from the ASM variable with the .o extension inplace of the .S extension.
+# The assembly object files are added to the OBJS variable.
+# This allows the assembly files to be compiled and linked with the C source files.
+# The assembly files are expected to be in the srcs directory & sub-directories.
+# The assembly files are expected to have the .S extension.
+# The assembly files are expected to be compiled with the same compiler as the C source files.
+# The assembly files are expected to be compiled with the same flags as the C source files.
+OBJS += $(ASMS)
 
 # Compiler and flags
 COMPILER  := c99
@@ -50,6 +65,7 @@ ifeq ($(COMPILER),c99)
 CC := $(COMPILER_LOCATION)/xc32-gcc
 MCU := -mprocessor=$(DEVICE)
 STD := c99
+FLAGS := -Werror -Wall -MP -MMD -MF
 else
 CC := $(COMPILER_LOCATION)/xc32
 MCU := -mprocessor=$(DEVICE)
@@ -59,19 +75,22 @@ endif
 
 # Assign all Include directories dynamically, first run "make build_dir" from terminal.
 INCS := $(foreach d,$(shell find $(INC_DIR) -type d),-I$d)
-INCS +=   -I/opt/microchip/mplabx/v6.25/packs/Microchip/PIC32MZ-EF_DFP/1.4.168/include
+INCS +=   -I$(DFP_INCLUDE)
 
 
 #Direct the compiler outputs for .o files from .c or .cpp code
 DIRECT_OBJ := $(CC)    -g -x c -c $(MCU)  -ffunction-sections -fdata-sections -O1 -fno-common \
-			$(INCS)  -Werror -Wall -MP -MMD -MF -DXPRJ_default=default -mdfp=$(DFP_DIR)
+			$(INCS)  $(FLAGS) -DXPRJ_default=default -mdfp=$(DFP_DIR)
 			
 
 # Direct compiler output for linker 
-DIRECT_LINK := $(CC)  $(MCU) -DXPRJ_default=default -mdfp="/opt/microchip/mplabx/v6.25/packs/Microchip/PIC32MZ-EF_DFP/1.4.168" 	\
+DIRECT_LINK := $(CC)  $(MCU) -nostartfiles -DXPRJ_default=default -mdfp=$(DFP_DIR) 	\
 			-Wl,--defsym=__MPLAB_BUILD=1,--script="p32MZ1024EFH100.ld",--defsym=_min_heap_size=512,--gc-sections,--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="$(OUT_DIR)/production.map",--memorysummary,$(OUT_DIR)/memoryfile.xml \
-			
 
+
+
+
+DIRECT_ASM :=   -c  -DXPRJ_default=default    -Wa,--defsym=__MPLAB_BUILD=1,-MD=$(OBJ_DIR)/startup/startup.o.asm.d,--gdwarf-2 -mdfp=$(DFP_DIR) -MMD -MF $(OBJ_DIR)/startup/startup.o.d
 
 # Define the default target (which is built when make is invoked without any arguments)
 $(BIN_DIR)/$(MODULE): $(OBJS)
@@ -86,8 +105,11 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	$(DIRECT_OBJ) -c $< -o $@
 	@echo "Object file created: $@"
 
+$(OBJ_DIR)/%.o: %.S
+	@echo "Compiling assembly file $< to object file $@"
+	$(CC) $(MCU) $(DIRECT_ASM) -o $@ $<
+	@echo "Object file created: $@"
 
-#	$(DIRECT_OBJ) -c $< -o $@ 
 
 
 .PHONY: clean build_dir debug  help
@@ -137,7 +159,8 @@ clean:
 
 define clear_build_dir
 	rm -r  $(BIN_DIR)/*   \
-		$(OBJS)
+		$(OBJS)	          \
+		$(OBJ_DIR)/startup/*
 endef
 
 
