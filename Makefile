@@ -18,7 +18,7 @@ DFP := $(DFP_LOCATION)/Microchip/PIC32MZ-EF_DFP/1.4.168
 
 
 BUILD=make
-CLEAN=m
+CLEAN=make clean
 BUILD_DIR=make build_dir
 #THIRDP_LIB_PATH=/usr/local/mylibs/
 
@@ -42,16 +42,16 @@ debug:
 
 
 clean:
-	@echo "#######BUILDING DIRECTORIES FOR OUTPUT BINARIES#######"
+	@echo "####### CLEANING OUTPUTS #######"
 	(cd srcs; $(CLEAN))
 
 
 install:
 	(cd srcs; $(BUILD) install)
 
-load:
+flash:
 	@echo "#######LOADING OUTPUTS#######"
-	$(shell  ../MikroC_bootloader_lnx/bins/mikro_hb bins/VS_XC32_CNC.hex)
+	(cd bins; sudo ../../MikroC_bootloader_lnx/bins/mikro_hb $(MODULE).hex)
 	@echo "#######LOAD COMPLETE#######"
 
 

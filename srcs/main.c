@@ -38,6 +38,8 @@ int main ( void )
 {
     /* Initialize all moduales */
     SYS_Initialize ( NULL );
+    app_config();
+    LED2_Set();
 
     while ( true )
     {
